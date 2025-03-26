@@ -23,8 +23,73 @@ STEP 7: Use cross tabulation method to quantitatively analyze the relationship b
 STEP 8: Use heatmap method of representation to show relationships between two variables, one plotted on each axis.
 
 ## CODING AND OUTPUT
-        <<INCLUDE YOUR CODING AND OUTPUT SCREENSHOTS>>
-![image](https://github.com/user-attachments/assets/8179e32a-bd7a-4447-89a5-bcc8b7cf122d)
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns  
+
+df = pd.read_csv(r"C:\Users\Suriya\Downloads\titanic_dataset.csv")
+df
+```
+![Screenshot 2025-03-26 154452](https://github.com/user-attachments/assets/1716a007-18d5-412f-bfb4-5a790b0a3593)
+
+
+
+```
+df.info()
+```
+![Screenshot 2025-03-26 154505](https://github.com/user-attachments/assets/d9c687ca-35cb-49e1-8fa8-d41e4f538714)
+
+
+
+```
+df.shape
+```
+![Screenshot 2025-03-26 154523](https://github.com/user-attachments/assets/43d3915f-7412-49b8-b423-d829a9b42f08)
+
+
+
+
+```
+df.set_index("PassengerId", inplace=True)
+df.describe()
+```
+
+![Screenshot 2025-03-26 154533](https://github.com/user-attachments/assets/652684dd-bc05-43ce-bbd0-2689360e259d)
+
+
+```
+df.shape
+```
+
+![Screenshot 2025-03-26 154540](https://github.com/user-attachments/assets/27621094-dd91-4ec3-9ca6-f690aead9813)
+
+
+
+```
+df.nunique()
+```
+![Screenshot 2025-03-26 154546](https://github.com/user-attachments/assets/b559bbcf-7589-4a7b-b5f1-300e43812783)
+
+
+```
+df["Survived"].value_counts()
+```
+![Screenshot 2025-03-26 154546](https://github.com/user-attachments/assets/fd7f0172-e641-417d-8ac2-bdbd6a482355)
+
+```
+per=(df["Survived"].value_counts()/df.shape[0]*100).round(2)
+per
+```
+
+
+```
+sns.countplot(data=df,x="Survived", palette={"0": "blue", "1": "orange"})
+```
+![Screenshot 2025-03-26 154611](https://github.com/user-attachments/assets/8fd7e0ce-9915-44d6-9bac-77926a886c2d)
+
+
 
 # RESULT
         <<INCLUDE YOUR RESULT HERE>>
