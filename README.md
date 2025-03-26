@@ -65,7 +65,7 @@ df.shape
 
 ![Screenshot 2025-03-26 154540](https://github.com/user-attachments/assets/27621094-dd91-4ec3-9ca6-f690aead9813)
 
-
+## Categorical data analysis
 
 ```
 df.nunique()
@@ -115,7 +115,7 @@ df
 
 ![Screenshot 2025-03-26 160712](https://github.com/user-attachments/assets/5c998169-9568-46b1-b746-022be9497a5d)
 
-
+## Bivariate Analysis
 
 ```
 sns.catplot(x="Gender", col="Survived", kind="count", data=df, height=5, aspect=0.7, palette={"male": "blue", "female": "orange"})
@@ -153,7 +153,7 @@ sns.jointplot(x="Age",y="Fare",data=df)
 
 ![Screenshot 2025-03-26 160749](https://github.com/user-attachments/assets/81dab586-1e5e-4c00-938c-222a00a2ea0a)
 
-
+## Multivariate Analysis
 
 
 ```
@@ -170,7 +170,7 @@ sns.catplot(data=df,col="Survived",x="Gender",hue="Pclass",kind="count")
 ```
 
 ![Screenshot 2025-03-26 160809](https://github.com/user-attachments/assets/41f5583f-1971-4bce-952a-5010815b8c3f)
-
+## Co-relation
 
 ```
 corr = df.select_dtypes(include=['number']).corr()
@@ -184,7 +184,8 @@ sns.heatmap(corr, annot=True)
 ```
 sns.pairplot(df)
 ```
-![image](https://github.com/user-attachments/assets/12f2b145-7d66-43ed-81e8-fc97f7a18c0a)
+![image](https://github.com/user-attachments/assets/4ab60864-c8b6-4d33-8dcb-4c7a5a4bf641)
+
 
 
 
@@ -192,4 +193,5 @@ sns.pairplot(df)
 
 
 # RESULT
-        <<INCLUDE YOUR RESULT HERE>>
+We have performed Exploratory Data Analysis on the given data set successfully.
+
